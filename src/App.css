@@ -99,4 +99,199 @@
 }
 
 .example-questions li:before {
-  cont
+  content: "•";
+  color: #2563EB;
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+}
+
+/* Embed Code Section Styles */
+.embed-section {
+  border: 2px solid #2563EB;
+  background: #f0f9ff;
+}
+
+.code-block {
+  background: #1a1f2e;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: 'Courier New', Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.code-block code {
+  color: #a8b2d1;
+  background: none;
+  padding: 0;
+}
+
+.copy-button {
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.copy-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-weight: 500;
+  border: 1px solid #bbf7d0;
+}
+
+.embed-instructions {
+  background: #eff6ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 24px;
+  border: 1px solid #dbeafe;
+}
+
+.embed-instructions h4 {
+  color: #1e40af;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.embed-instructions ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #374151;
+}
+
+.embed-instructions li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* About Section & GitHub Info Styles */
+.about-section {
+  border: 2px solid #6b7280;
+  background: #f9fafb;
+}
+
+.github-info {
+  background: #f3f4f6;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  border-left: 4px solid #6b7280;
+}
+
+.github-info h4 {
+  color: #1a1f2e;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.github-info p {
+  margin-bottom: 16px;
+  color: #4b5563;
+}
+
+.github-link {
+  display: inline-block;
+  background: #1a1f2e;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  margin: 16px 0;
+}
+
+.github-link:hover {
+  background: #374151;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 31, 46, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.github-link:active {
+  transform: translateY(0);
+}
+
+.tech-stack {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .demo-header h1 {
+    font-size: 36px;
+  }
+  
+  .demo-header p {
+    font-size: 18px;
+  }
+
+  .helmguard-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+  
+  .demo-section {
+    padding: 24px;
+  }
+
+  .code-block {
+    padding: 16px;
+    font-size: 12px;
+  }
+
+  .copy-button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .example-questions li {
+    font-size: 14px;
+    padding-right: 0;
+  }
+
+  .github-link {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .github-info {
+    padding: 20px;
+  }
+}
