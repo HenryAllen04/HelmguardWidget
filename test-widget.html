@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelmGuard Widget Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563EB;
+            margin-bottom: 20px;
+        }
+        .test-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2563EB;
+        }
+        .widget-info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background: #1a1f2e;
+            color: #a8b2d1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .copy-button {
+            background: #2563EB;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .copy-button:hover {
+            background: #1d4ed8;
+        }
+        .embed-section {
+            background: #f0f9ff;
+            border: 2px solid #2563EB;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success-message {
+            background: #dcfce7;
+            color: #166534;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+
+    <!-- HelmGuard Widget - 2 Line Embed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.css">
+    <script src="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.js" data-auto-init="true"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ HelmGuard Widget Test Page</h1>
+        
+        <div class="widget-info">
+            <strong>✅ Widget Status:</strong> If you see a blue chat button in the bottom-right corner, the widget is working!
+        </div>
+
+        <div class="embed-section">
+            <h3>📋 Copy This Code for Your Website:</h3>
+            <p>Copy and paste these 2 lines into your Webflow site (Project Settings → Custom Code → Head Code):</p>
+            
+            <div class="code-block" id="embedCode">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.js" data-auto-init="true"&gt;&lt;/script&gt;</div>
+            
+            <button class="copy-button" onclick="copyEmbedCode()">📋 Copy to Clipboard</button>
+            <div class="success-message" id="successMessage">✅ Code copied to clipboard!</div>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 How to Test:</h3>
+            <ol>
+                <li><strong>Look for the blue chat button</strong> in the bottom-right corner</li>
+                <li><strong>Click the button</strong> to open the chat widget</li>
+                <li><strong>Try these test questions:</strong>
+                    <ul>
+                        <li>"What is your password policy?"</li>
+                        <li>"How do you handle incident response?"</li>
+                        <li>"What encryption standards do you use?"</li>
+                        <li>"Do you have a CISO?"</li>
+                        <li>"How often do you conduct security assessments?"</li>
+                    </ul>
+                </li>
+                <li><strong>Test the fallback:</strong> Ask something like "What's your favorite color?" to see the fallback response</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3>⚡ Why It's Fast:</h3>
+            <ul>
+                <li><strong>CDN Delivery:</strong> Files served from 120+ global locations</li>
+                <li><strong>Pre-compiled:</strong> Already optimized and minified (243KB total)</li>
+                <li><strong>Client-side:</strong> No server calls needed for Q&A matching</li>
+                <li><strong>Browser caching:</strong> Files cached after first load</li>
+                <li><strong>Single bundle:</strong> Everything in one optimized file</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>📱 Mobile Testing:</h3>
+            <p>Open this page on your phone to test mobile responsiveness. The widget should adapt to smaller screens.</p>
+        </div>
+
+        <div class="test-section">
+            <h3>🎯 What to Look For:</h3>
+            <ul>
+                <li>Blue chat button appears and is clickable</li>
+                <li>Chat interface opens smoothly</li>
+                <li>You can type and send messages</li>
+                <li>Bot responds with relevant answers</li>
+                <li>Loading states work during processing</li>
+                <li>Fallback message appears for unmatched questions</li>
+                <li>Contact link works in fallback responses</li>
+            </ul>
+        </div>
+
+        <div class="widget-info">
+            <strong>💡 Pro Tip:</strong> Open browser developer tools (F12) to check for any console errors if the widget doesn't appear.
+        </div>
+
+        <p>This is a sample page content to demonstrate how the widget integrates with existing web content. The widget floats independently and doesn't interfere with your page layout.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    </div>
+
+    <script>
+        function copyEmbedCode() {
+            const code = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.css">
+<script src="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.js" data-auto-init="true"><\/script>`;
+            
+            navigator.clipboard.writeText(code).then(function() {
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 3000);
+            }).catch(function(err) {
+                alert('Copy failed. Please select and copy the code manually.');
+            });
+        }
+    </script>
+</body>
+</html> 
