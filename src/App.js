@@ -76,10 +76,26 @@ function App() {
             </div>
           </section>
 
-          <section className="demo-section">
+          <section className="demo-section about-section">
             <h2>About This Demo</h2>
             <p>This widget demonstrates HelmGuard's ability to automatically respond to cybersecurity questionnaires using your existing documentation. In this demo, we're using a sample set of 25 common security questions.</p>
             <p>The full HelmGuard platform can handle thousands of questions and use your actual security documentation to generate accurate, consistent responses.</p>
+            
+            <div className="github-info">
+              <h4>Give me a star on GitHub ⭐️</h4>
+              <p>This widget is open source and fully customizable for your needs. You can view the source code, contribute, or create your own version:</p>
+              <a 
+                href="https://github.com/HenryAllen04/HelmguardWidget" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                Check out the repo
+              </a>
+              <p className="tech-stack">
+                Built with React 19, Webpack, and deployed via jsDelivr CDN for global performance.
+              </p>
+            </div>
           </section>
         </main>
       </div>
