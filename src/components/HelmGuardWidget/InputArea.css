@@ -1,0 +1,103 @@
+/* Purpose: Styles for the input area in the HelmGuard Demo Widget */
+
+.helmguard-input-area {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.helmguard-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.helmguard-input-wrapper:focus-within {
+  background: white;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Input Field */
+.helmguard-input-field {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1a1f2e;
+  resize: none;
+  min-height: 20px;
+  max-height: 120px;
+  font-family: inherit;
+}
+
+.helmguard-input-field::placeholder {
+  color: #9ca3af;
+}
+
+.helmguard-input-field:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Send Button */
+.helmguard-send-button {
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.helmguard-send-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.helmguard-send-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.helmguard-send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.helmguard-loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .helmguard-input-area {
+    padding: 12px;
+  }
+  
+  .helmguard-input-wrapper {
+    padding: 6px 10px;
+  }
+} 

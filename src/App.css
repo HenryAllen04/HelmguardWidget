@@ -1,38 +1,107 @@
+/* Purpose: Styles for the HelmGuard Demo Widget demo page */
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.demo-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.demo-header h1 {
+  font-size: 48px;
+  color: #1a1f2e;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.demo-header p {
+  font-size: 20px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.demo-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.demo-section {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.demo-section h2 {
+  font-size: 28px;
+  color: #1a1f2e;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.demo-section p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.example-questions {
+  margin-top: 24px;
+  padding: 24px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  border-left: 4px solid #2563EB;
+}
+
+.example-questions h3 {
+  font-size: 18px;
+  color: #1a1f2e;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.example-questions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-questions li {
+  padding: 8px 0;
+  color: #4b5563;
+  position: relative;
+  padding-left: 24px;
+}
+
+.example-questions li:before {
+  content: "•";
+  color: #2563EB;
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+}
+
+@media (max-width: 768px) {
+  .demo-header h1 {
+    font-size: 36px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .demo-header p {
+    font-size: 18px;
+  }
+  
+  .demo-section {
+    padding: 24px;
   }
 }
