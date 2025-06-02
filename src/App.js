@@ -1,15 +1,30 @@
 // Purpose: Main App component showcasing the HelmGuard Demo Widget
 
-import React from 'react';
+import React, { useState } from 'react';
 import { WidgetContainer } from './components/HelmGuardWidget';
 import './App.css';
 
 function App() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmbedCode = () => {
+    const code = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.css">
+<script src="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.js" data-auto-init="true"></script>`;
+    
+    navigator.clipboard.writeText(code).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    }).catch(() => {
+      alert('Copy failed. Please select and copy the code manually.');
+    });
+  };
+
   return (
     <div className="App">
       {/* Demo Page Content */}
       <div className="demo-page">
         <header className="demo-header">
+          <img src="/HelmguardIcon.png" alt="HelmGuard" className="helmguard-logo" />
           <h1>HelmGuard Demo Widget</h1>
           <p>Experience automated cybersecurity questionnaire responses</p>
         </header>
@@ -22,12 +37,42 @@ function App() {
             <div className="example-questions">
               <h3>Example Questions You Can Ask:</h3>
               <ul>
-                <li>What is your password policy?</li>
-                <li>How do you handle incident response?</li>
-                <li>What encryption standards do you use?</li>
-                <li>Do you have a CISO?</li>
-                <li>How often do you conduct security assessments?</li>
+                <li>Describe the process for managing user access, including onboarding, periodic reviews, and offboarding procedures.</li>
+                <li>How does the company assess and monitor the security posture of vendors and third-party service providers?</li>
+                <li>What data classification scheme is in place, and how is sensitive data identified and protected throughout its lifecycle?</li>
+                <li>How does the company measure the effectiveness of security training and address identified gaps?</li>
+                <li>What encryption standards and technologies are implemented for data at rest and in transit?</li>
               </ul>
+            </div>
+          </section>
+
+          <section className="demo-section embed-section">
+            <h2>📋 Add This Widget to Your Website</h2>
+            <p>Copy and paste these 2 lines into your website's head section:</p>
+            
+            <div className="code-block">
+              <pre><code>{`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.css">
+<script src="https://cdn.jsdelivr.net/gh/HenryAllen04/HelmguardWidget@main/dist/helmguard-widget.js" data-auto-init="true"></script>`}</code></pre>
+            </div>
+            
+            <button className="copy-button" onClick={copyEmbedCode}>
+              📋 {copied ? 'Copied!' : 'Copy to Clipboard'}
+            </button>
+            
+            {copied && (
+              <div className="success-message">
+                ✅ Code copied to clipboard! Now paste it into your website's head section.
+              </div>
+            )}
+
+            <div className="embed-instructions">
+              <h4>🚀 For Webflow Users:</h4>
+              <ol>
+                <li>Go to Project Settings → Custom Code</li>
+                <li>Paste the code into "Head Code"</li>
+                <li>Publish your site</li>
+                <li>The blue chat button will appear automatically!</li>
+              </ol>
             </div>
           </section>
 
